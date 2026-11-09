@@ -1,0 +1,62 @@
+========== YatraIQ DATASET PROFILE ==========
+
+Total rows: 785976
+Total columns: 15
+
+COLUMN NAMES AND DATA TYPES
+date                       str
+deviceid                 int64
+direction                int64
+segment                  int64
+start_point              int64
+end_point                int64
+start_time                 str
+run_time_in_seconds      int64
+dwell_time_in_seconds    int64
+arrival_time               str
+departure_time             str
+trip_id                  int64
+device_guid                str
+start_guid                 str
+end_guid                   str
+
+FIRST FIVE RECORDS
+      date  deviceid  direction  segment  start_point  end_point          start_time  run_time_in_seconds  dwell_time_in_seconds        arrival_time      departure_time  trip_id                          device_guid                           start_guid                             end_guid
+2024-08-01      1038          2       39         2037       2038 2024-08-01 17:38:47                  279                      0 2024-08-01 17:43:26 2024-08-01 17:43:26     2306 04326bab-ee84-491d-8b3c-db5be265e756 3d570ad2-db12-47d1-b15e-a33dfa403c56 9c39bef4-78ba-41cc-af86-4e9cec3e06dd
+2024-08-01      1038          2        6         2006       2004 2024-08-01 16:44:26                   52                      0 2024-08-01 16:45:18 2024-08-01 16:45:18     2306 04326bab-ee84-491d-8b3c-db5be265e756 88b7ca3b-3501-4efe-b33f-701453ffa277 28764497-a568-434f-83dd-932a3c91e199
+2024-09-11       780          2        5         2004       2006 2024-09-11 16:16:14                   37                      0 2024-09-11 16:16:51 2024-09-11 16:16:51    19707 ad9f7b2b-5776-4de9-9b73-e28b5fe585fa 28764497-a568-434f-83dd-932a3c91e199 88b7ca3b-3501-4efe-b33f-701453ffa277
+2024-09-11       789          2        5         2004       2006 2024-09-11 18:22:42                   54                      0 2024-09-11 18:23:36 2024-09-11 18:23:36    19767 998bdc88-e13b-41fc-951e-7dd31ae1179b 28764497-a568-434f-83dd-932a3c91e199 88b7ca3b-3501-4efe-b33f-701453ffa277
+2024-09-11       791          2        5         2006       2004 2024-09-11 18:41:49                   49                      0 2024-09-11 18:42:38 2024-09-11 18:42:38    19777 1c2bf601-811b-4623-a976-bdc87dff3b3b 88b7ca3b-3501-4efe-b33f-701453ffa277 28764497-a568-434f-83dd-932a3c91e199
+
+MISSING VALUES
+date                     0
+deviceid                 0
+direction                0
+segment                  0
+start_point              0
+end_point                0
+start_time               0
+run_time_in_seconds      0
+dwell_time_in_seconds    0
+arrival_time             0
+departure_time           0
+trip_id                  0
+device_guid              0
+start_guid               0
+end_guid                 0
+
+DUPLICATE RECORDS
+0
+
+NUMERICAL COLUMN SUMMARY
+           deviceid      direction        segment    start_point      end_point  run_time_in_seconds  dwell_time_in_seconds        trip_id
+count  7.859760e+05  785976.000000  785976.000000  785976.000000  785976.000000        785976.000000          785976.000000  785976.000000
+mean   2.653612e+06       1.503084      20.705569    4605.535303    4586.209328           105.602788              37.921912   14867.095696
+std    3.943283e+07       0.499991      11.734491    6545.048497    6538.348769           188.425612             156.450348    8540.154447
+min    5.320000e+02       1.000000       1.000000     101.000000     101.000000             0.000000               0.000000       1.000000
+25%    7.970000e+02       1.000000      11.000000     238.000000     238.000000            42.000000              15.000000    7538.000000
+50%    1.136000e+03       2.000000      21.000000    2002.000000    2002.000000            70.000000              24.000000   14571.000000
+75%    2.368000e+03       2.000000      31.000000   10001.000000   10002.000000           113.000000              34.000000   22120.000000
+max    5.890880e+08       2.000000      56.000000   20044.000000   20044.000000         19140.000000           19140.000000   29517.000000
+
+========== PROFILE COMPLETED ==========

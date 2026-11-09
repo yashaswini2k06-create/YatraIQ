@@ -1,0 +1,8 @@
+{
+    "model": "HistGradientBoostingRegressor",
+    "training_records": 628040,
+    "testing_records": 157011,
+    "MAE": 41.068112788589275,
+    "RMSE": 120.85913909030472,
+    "R2_score": 0.5847381284703905
+}
