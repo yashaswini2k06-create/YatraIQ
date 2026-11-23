@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,526 +11,882 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
 
-<!-- TOP NAVIGATION -->
+    <!-- =====================================
+         TOP NAVIGATION
+    ====================================== -->
 
-<header class="topbar">
+    <header class="topbar">
 
-    <div class="logo">
-        <i class="fas fa-bus"></i>
-        YatraIQ
-    </div>
-
-    <nav class="top-navigation">
-
-        <a href="#" class="active" data-page="home">Home</a>
-        <a href="#" data-page="dashboard">Dashboard</a>
-        <a href="#" data-page="prediction">Prediction</a>
-        <a href="#" data-page="routes">Routes</a>
-        <a href="#" data-page="analytics">Analytics</a>
-
-    </nav>
-
-    <div class="profile">
-        <i class="fas fa-circle-user"></i>
-    </div>
-
-</header>
-
-
-<div class="app-container">
-
-<!-- SIDEBAR -->
-
-<aside class="sidebar">
-
-    <a href="#" class="side-link active" data-page="home">
-        <i class="fas fa-house"></i> Home
-    </a>
-
-    <a href="#" class="side-link" data-page="dashboard">
-        <i class="fas fa-gauge"></i> Dashboard
-    </a>
-
-    <a href="#" class="side-link" data-page="prediction">
-        <i class="fas fa-clock"></i> Prediction
-    </a>
-
-    <a href="#" class="side-link" data-page="routes">
-        <i class="fas fa-route"></i> Routes
-    </a>
-
-    <a href="#" class="side-link" data-page="analytics">
-        <i class="fas fa-chart-line"></i> Analytics
-    </a>
-
-    <a href="#" class="side-link" data-page="about">
-        <i class="fas fa-circle-info"></i> About
-    </a>
-
-</aside>
-
-
-<!-- MAIN CONTENT -->
-
-<main class="main-content">
-
-
-<!-- HOME PAGE -->
-
-<section id="home" class="page active">
-
-    <div class="hero-section">
-
-        <div class="hero-text">
-
-            <span class="welcome-label">
-                SMART TRANSPORT INTELLIGENCE
-            </span>
-
-            <h1>
-                Public Transport
-                Journey Time Prediction
-                Using Machine Learning
-            </h1>
-
-            <p>
-                Predict public transport journey times
-                using intelligent machine learning technology.
-                Travel smarter with YatraIQ.
-            </p>
-
-            <button class="primary-button"
-            onclick="document.querySelector('[data-page=prediction]').click()">
-
-                Predict Journey
-                <i class="fas fa-arrow-right"></i>
-
-            </button>
-
-        </div>
-
-        <div class="hero-image">
-
-            <i class="fas fa-city city-icon"></i>
-
-            <i class="fas fa-bus-simple bus-illustration"></i>
-
-            <div class="road"></div>
-
-        </div>
-
-    </div>
-
-
-    <!-- STATISTICS -->
-
-    <div class="statistics-grid">
-
-        <div class="stat-card">
-
+        <div class="logo">
             <i class="fas fa-bus"></i>
-
-            <h2 id="totalPredictions">0</h2>
-
-            <p>Predictions</p>
-
+            YatraIQ
         </div>
 
-        <div class="stat-card">
+        <nav class="top-navigation">
 
-            <i class="fas fa-clock"></i>
+            <a href="#" class="active" data-page="home">Home</a>
+            <a href="#" data-page="dashboard">Dashboard</a>
+            <a href="#" data-page="prediction">Prediction</a>
+            <a href="#" data-page="routes">Routes</a>
+            <a href="#" data-page="analytics">Analytics</a>
 
-            <h2 id="averageTime">0 min</h2>
+        </nav>
 
-            <p>Average Journey Time</p>
-
+        <div class="profile">
+            <i class="fas fa-circle-user"></i>
         </div>
 
-        <div class="stat-card">
+    </header>
 
-            <i class="fas fa-brain"></i>
 
-            <h2>AI</h2>
+    <!-- =====================================
+         APPLICATION CONTAINER
+    ====================================== -->
 
-            <p>ML Powered Prediction</p>
+    <div class="app-container">
 
-        </div>
 
-        <div class="stat-card">
+        <!-- SIDEBAR -->
 
-            <i class="fas fa-check-circle"></i>
+        <aside class="sidebar">
 
-            <h2>24/7</h2>
+            <a href="#" class="side-link active" data-page="home">
+                <i class="fas fa-house"></i>
+                Home
+            </a>
 
-            <p>Prediction Access</p>
+            <a href="#" class="side-link" data-page="dashboard">
+                <i class="fas fa-gauge"></i>
+                Dashboard
+            </a>
 
-        </div>
+            <a href="#" class="side-link" data-page="prediction">
+                <i class="fas fa-clock"></i>
+                Prediction
+            </a>
 
-    </div>
+            <a href="#" class="side-link" data-page="routes">
+                <i class="fas fa-route"></i>
+                Routes
+            </a>
 
+            <a href="#" class="side-link" data-page="analytics">
+                <i class="fas fa-chart-line"></i>
+                Analytics
+            </a>
 
-    <div class="content-card">
+            <a href="#" class="side-link" data-page="about">
+                <i class="fas fa-circle-info"></i>
+                About
+            </a>
 
-        <i class="fas fa-lightbulb section-icon"></i>
+        </aside>
 
-        <h2>Welcome to YatraIQ</h2>
 
-        <p>
-            YatraIQ is an intelligent public transport
-            journey time prediction platform that uses
-            a trained machine learning model to estimate
-            journey duration based on route and departure details.
-        </p>
+        <!-- =====================================
+             MAIN CONTENT
+        ====================================== -->
 
-        <button class="primary-button"
-        onclick="document.querySelector('[data-page=prediction]').click()">
+        <main class="main-content">
 
-            Get Started
 
-        </button>
+            <!-- =================================
+                 HOME PAGE
+            ================================== -->
 
-    </div>
+            <section id="home" class="page active">
 
-</section>
+                <div class="hero-section">
 
+                    <div class="hero-text">
 
-<!-- DASHBOARD PAGE -->
+                        <span class="welcome-label">
+                            SMART TRANSPORT INTELLIGENCE
+                        </span>
 
-<section id="dashboard" class="page">
+                        <h1>
+                            Public Transport
+                            Journey Time Prediction
+                            Using Machine Learning
+                        </h1>
 
-    <div class="page-heading">
+                        <p>
+                            Predict public transport journey times
+                            using intelligent machine learning technology.
+                            Travel smarter with YatraIQ.
+                        </p>
 
-        <h1>Dashboard</h1>
+                        <button class="primary-button"
+                            onclick="document.querySelector('[data-page=prediction]').click()">
 
-        <p>Monitor your journey prediction activity.</p>
+                            Predict Journey
 
-    </div>
+                            <i class="fas fa-arrow-right"></i>
 
-    <div class="statistics-grid">
+                        </button>
 
-        <div class="stat-card">
+                    </div>
 
-            <i class="fas fa-bus"></i>
 
-            <h2 id="dashboardTotal">0</h2>
+                    <div class="hero-image">
 
-            <p>Total Predictions</p>
+                        <i class="fas fa-city city-icon"></i>
 
-        </div>
+                        <i class="fas fa-bus-simple bus-illustration"></i>
 
-        <div class="stat-card">
+                        <div class="road"></div>
 
-            <i class="fas fa-clock"></i>
-
-            <h2 id="dashboardAverage">0 min</h2>
-
-            <p>Average Journey Time</p>
-
-        </div>
-
-    </div>
-
-    <div class="content-card">
-
-        <h2>Recent Prediction History</h2>
-
-        <div class="table-container">
-
-            <table>
-
-                <thead>
-
-                    <tr>
-                        <th>Date & Time</th>
-                        <th>From</th>
-                        <th>To</th>
-                        <th>Predicted Time</th>
-                    </tr>
-
-                </thead>
-
-                <tbody id="historyTable"></tbody>
-
-            </table>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- PREDICTION PAGE -->
-
-<section id="prediction" class="page">
-
-    <div class="page-heading">
-
-        <h1>Journey Prediction</h1>
-
-        <p>Enter journey details to predict travel time.</p>
-
-    </div>
-
-
-    <div class="prediction-card">
-
-        <div class="prediction-header">
-
-            <i class="fas fa-bus"></i>
-
-            <h2>Predict Journey Time</h2>
-
-        </div>
-
-
-        <form id="predictionForm">
-
-            <div class="form-grid">
-
-                <div class="form-group">
-
-                    <label>Direction</label>
-
-                    <input
-                    type="text"
-                    name="direction"
-                    placeholder="Enter direction"
-                    required>
+                    </div>
 
                 </div>
 
 
-                <div class="form-group">
+                <!-- HOME STATISTICS -->
 
-                    <label>Segment</label>
+                <div class="statistics-grid">
 
-                    <input
-                    type="text"
-                    name="segment"
-                    placeholder="Enter segment"
-                    required>
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-bus"></i>
+
+                        <h2 id="totalPredictions">0</h2>
+
+                        <p>Total Predictions</p>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-clock"></i>
+
+                        <h2 id="averageTime">0 min</h2>
+
+                        <p>Average Journey Time</p>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-brain"></i>
+
+                        <h2>AI</h2>
+
+                        <p>ML Powered Prediction</p>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-check-circle"></i>
+
+                        <h2>24/7</h2>
+
+                        <p>Prediction Access</p>
+
+                    </div>
+
 
                 </div>
 
 
-                <div class="form-group">
+                <!-- WELCOME CARD -->
 
-                    <label>Starting Point</label>
+                <div class="content-card">
 
-                    <input
-                    type="text"
-                    name="start_point"
-                    placeholder="Enter starting point"
-                    required>
+                    <i class="fas fa-lightbulb section-icon"></i>
+
+                    <h2>Welcome to YatraIQ</h2>
+
+                    <p>
+                        YatraIQ is an intelligent public transport
+                        journey time prediction platform that uses
+                        a trained machine learning model to estimate
+                        journey duration based on route and departure details.
+                    </p>
+
+                    <button class="primary-button"
+                        onclick="document.querySelector('[data-page=prediction]').click()">
+
+                        Get Started
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 DASHBOARD PAGE
+            ================================== -->
+
+            <section id="dashboard" class="page">
+
+                <div class="page-heading">
+
+                    <h1>Dashboard</h1>
+
+                    <p>
+                        Monitor your journey prediction activity.
+                    </p>
 
                 </div>
 
 
-                <div class="form-group">
+                <!-- DASHBOARD STATISTICS -->
 
-                    <label>Destination</label>
+                <div class="statistics-grid">
 
-                    <input
-                    type="text"
-                    name="end_point"
-                    placeholder="Enter destination"
-                    required>
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-bus"></i>
+
+                        <h2 id="dashboardTotal">0</h2>
+
+                        <p>Total Predictions</p>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-clock"></i>
+
+                        <h2 id="dashboardAverage">0 min</h2>
+
+                        <p>Average Journey Time</p>
+
+                    </div>
+
 
                 </div>
 
 
-                <div class="form-group">
+                <!-- RECENT PREDICTION HISTORY -->
 
-                    <label>Day of Week (0-6)</label>
+                <div class="content-card">
 
-                    <input
-                    type="number"
-                    name="day_of_week"
-                    min="0"
-                    max="6"
-                    required>
+                    <h2>Recent Prediction History</h2>
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+                                    <th>Date & Time</th>
+                                    <th>From</th>
+                                    <th>To</th>
+                                    <th>Predicted Time</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="historyTable">
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+                    <p id="emptyHistory" style="display:none;">
+                        No predictions available yet.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 PREDICTION PAGE
+            ================================== -->
+
+            <section id="prediction" class="page">
+
+                <div class="page-heading">
+
+                    <h1>Journey Prediction</h1>
+
+                    <p>
+                        Enter journey details to predict travel time.
+                    </p>
 
                 </div>
 
 
-                <div class="form-group">
+                <div class="prediction-card">
 
-                    <label>Month (1-12)</label>
 
-                    <input
-                    type="number"
-                    name="month"
-                    min="1"
-                    max="12"
-                    required>
+                    <!-- PREDICTION HEADER -->
+
+                    <div class="prediction-header">
+
+                        <i class="fas fa-bus"></i>
+
+                        <h2>Predict Journey Time</h2>
+
+                    </div>
+
+
+                    <!-- PREDICTION FORM -->
+
+                    <form id="predictionForm">
+
+                        <div class="form-grid">
+
+
+                            <!-- FEATURE 1: DIRECTION -->
+
+                            <div class="form-group">
+
+                                <label for="direction">
+                                    Direction
+                                </label>
+
+                                <select
+                                    name="direction"
+                                    id="direction"
+                                    required>
+
+                                    <option value="">
+                                        Select Direction
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- FEATURE 2: SEGMENT -->
+
+                            <div class="form-group">
+
+                                <label for="segment">
+                                    Segment
+                                </label>
+
+                                <select
+                                    name="segment"
+                                    id="segment"
+                                    required>
+
+                                    <option value="">
+                                        Select Segment
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- FEATURE 3: STARTING POINT -->
+
+                            <div class="form-group">
+
+                                <label for="start_point">
+                                    Starting Point
+                                </label>
+
+                                <select
+                                    name="start_point"
+                                    id="start_point"
+                                    required>
+
+                                    <option value="">
+                                        Select Starting Point
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- FEATURE 4: DESTINATION -->
+
+                            <div class="form-group">
+
+                                <label for="end_point">
+                                    Destination
+                                </label>
+
+                                <select
+                                    name="end_point"
+                                    id="end_point"
+                                    required>
+
+                                    <option value="">
+                                        Select Destination
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- FEATURE 5: DAY OF WEEK -->
+
+                            <div class="form-group">
+
+                                <label for="day_of_week">
+                                    Day of Week (0-6)
+                                </label>
+
+                                <select
+                                    name="day_of_week"
+                                    id="day_of_week"
+                                    required>
+
+                                    <option value="">
+                                        Select Day
+                                    </option>
+
+                                    <option value="0">Day 0</option>
+                                    <option value="1">Day 1</option>
+                                    <option value="2">Day 2</option>
+                                    <option value="3">Day 3</option>
+                                    <option value="4">Day 4</option>
+                                    <option value="5">Day 5</option>
+                                    <option value="6">Day 6</option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- FEATURE 6: MONTH -->
+
+                            <div class="form-group">
+
+                                <label for="month">
+                                    Month (7-9)
+                                </label>
+
+                                <select
+                                    name="month"
+                                    id="month"
+                                    required>
+
+                                    <option value="">
+                                        Select Month
+                                    </option>
+
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+
+                                </select>
+
+                            </div>
+
+
+
+                            <!-- FEATURE 7: DEPARTURE HOUR -->
+
+                            <div class="form-group">
+
+                                <label for="departure_hour">
+                                    Departure Hour (4-22)
+                                </label>
+
+                                <input
+                                    type="number"
+                                    name="departure_hour"
+                                    id="departure_hour"
+                                    min="4"
+                                    max="22"
+                                    step="1"
+                                    placeholder="Enter hour (4-22)"
+                                    required>
+
+                            </div>
+
+
+
+                            <!-- FEATURE 8: DEPARTURE MINUTE -->
+
+                            <div class="form-group">
+
+                                <label for="departure_minute">
+                                    Departure Minute (0-59)
+                                </label>
+
+                                <input
+                                    type="number"
+                                    name="departure_minute"
+                                    id="departure_minute"
+                                    min="0"
+                                    max="59"
+                                    step="1"
+                                    placeholder="Enter minute (0-59)"
+                                    required>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <!-- PREDICTION BUTTON -->
+
+                        <button
+                            type="submit"
+                            class="primary-button predict-button"
+                            id="predictButton">
+
+                            Predict Journey Time
+
+                            <i class="fas fa-arrow-right"></i>
+
+                        </button>
+
+
+                        <!-- LOADING INDICATOR -->
+
+                        <div
+                            id="loadingMessage"
+                            style="display:none;"
+                            role="status"
+                            aria-live="polite">
+
+                            <i class="fas fa-spinner fa-spin"></i>
+
+                            Generating prediction. Please wait...
+
+                        </div>
+
+
+                    </form>
+
+
+
+                    <!-- PREDICTION RESULT -->
+
+                    <div
+                        id="predictionResult"
+                        class="prediction-result"
+                        aria-live="polite"
+                        role="status">
+
+                    </div>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 ROUTES PAGE
+            ================================== -->
+
+            <section id="routes" class="page">
+
+                <div class="page-heading">
+
+                    <h1>Routes</h1>
+
+                    <p>
+                        Explore actual route combinations available
+                        in the training dataset.
+                    </p>
 
                 </div>
 
 
-                <div class="form-group">
+                <div class="content-card">
 
-                    <label>Departure Hour (0-23)</label>
 
-                    <input
-                    type="number"
-                    name="departure_hour"
-                    min="0"
-                    max="23"
-                    required>
+                    <i class="fas fa-map-location-dot section-icon"></i>
+
+                    <h2>Journey Route Information</h2>
+
+                    <p>
+                        YatraIQ uses actual route combinations
+                        from the processed dataset, including
+                        direction, segment, starting point
+                        and destination.
+                    </p>
+
+
+                    <!-- ROUTE SEARCH -->
+
+                    <div class="form-group">
+
+                        <label for="routeSearch">
+                            Search Available Routes
+                        </label>
+
+                        <input
+                            type="text"
+                            id="routeSearch"
+                            placeholder="Search direction, segment or point ID">
+
+                    </div>
+
+
+
+                    <!-- ROUTE TABLE -->
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>Direction</th>
+
+                                    <th>Segment</th>
+
+                                    <th>Starting Point</th>
+
+                                    <th>Destination</th>
+
+                                    <th>Action</th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody id="routesTable">
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+
+
+                    <!-- EMPTY ROUTES MESSAGE -->
+
+                    <p id="routesEmptyMessage" style="display:none;">
+                        No route information available.
+                    </p>
+
+
+                    <!-- NAVIGATE TO PREDICTION -->
+
+                    <button
+                        class="primary-button"
+                        onclick="document.querySelector('[data-page=prediction]').click()">
+
+                        Start Route Prediction
+
+                        <i class="fas fa-arrow-right"></i>
+
+                    </button>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================
+                 ANALYTICS PAGE
+            ================================== -->
+
+            <section id="analytics" class="page">
+
+                <div class="page-heading">
+
+                    <h1>Analytics</h1>
+
+                    <p>
+                        Visualize your journey prediction history
+                        and travel time statistics.
+                    </p>
 
                 </div>
 
 
-                <div class="form-group">
 
-                    <label>Departure Minute (0-59)</label>
+                <!-- ANALYTICS STATISTICS -->
 
-                    <input
-                    type="number"
-                    name="departure_minute"
-                    min="0"
-                    max="59"
-                    required>
+                <div class="statistics-grid">
+
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-chart-line"></i>
+
+                        <h2 id="analyticsTotal">0</h2>
+
+                        <p>Total Predictions</p>
+
+                    </div>
+
+
+
+                    <div class="stat-card">
+
+                        <i class="fas fa-clock"></i>
+
+                        <h2 id="analyticsAverage">0 min</h2>
+
+                        <p>Average Journey Time</p>
+
+                    </div>
+
 
                 </div>
 
-            </div>
 
 
-            <button type="submit"
-            class="primary-button predict-button">
+                <!-- JOURNEY TIME CHART -->
 
-                Predict Journey Time
+                <div class="content-card">
 
-                <i class="fas fa-arrow-right"></i>
+                    <h2>Journey Time Analysis</h2>
 
-            </button>
+                    <p>
+                        Displays the journey time of your recent predictions.
+                    </p>
 
-        </form>
+                    <div style="position:relative; width:100%; height:350px;">
+
+                        <canvas id="predictionChart"></canvas>
+
+                    </div>
+
+                </div>
 
 
-        <div id="predictionResult"
-        class="prediction-result"></div>
+
+                <!-- ROUTE FREQUENCY CHART -->
+
+                <div class="content-card">
+
+                    <h2>Prediction History</h2>
+
+                    <p>
+                        Displays the number of predictions
+                        generated for each route.
+                    </p>
+
+                    <div style="position:relative; width:100%; height:350px;">
+
+                        <canvas id="historyChart"></canvas>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================
+                 ABOUT PAGE
+            ================================== -->
+
+            <section id="about" class="page">
+
+                <div class="page-heading">
+
+                    <h1>About YatraIQ</h1>
+
+                    <p>
+                        Smart mobility through machine learning.
+                    </p>
+
+                </div>
+
+
+                <div class="content-card">
+
+                    <i class="fas fa-brain section-icon"></i>
+
+                    <h2>Our Project</h2>
+
+                    <p>
+                        YatraIQ is a machine learning based
+                        public transport journey time prediction system.
+                    </p>
+
+                    <p>
+                        The system uses historical transport data,
+                        feature engineering and a trained machine
+                        learning model to estimate journey duration.
+                    </p>
+
+
+                    <h2>Technologies Used</h2>
+
+                    <p>
+                        Python | Flask | Machine Learning |
+                        HTML | CSS | JavaScript | Chart.js
+                    </p>
+
+
+                    <h2>Key Features</h2>
+
+                    <p>
+                        • Machine learning based journey prediction
+                    </p>
+
+                    <p>
+                        • Dataset-based route selection
+                    </p>
+
+                    <p>
+                        • Prediction history
+                    </p>
+
+                    <p>
+                        • Interactive analytics dashboard
+                    </p>
+
+                    <p>
+                        • Real-time frontend and backend integration
+                    </p>
+
+
+                </div>
+
+            </section>
+
+
+        </main>
 
     </div>
 
-</section>
 
 
-<!-- ROUTES PAGE -->
+    <!-- =====================================
+         JAVASCRIPT
+    ====================================== -->
 
-<section id="routes" class="page">
-
-    <div class="page-heading">
-
-        <h1>Routes</h1>
-
-        <p>Enter your route information for journey prediction.</p>
-
-    </div>
-
-    <div class="content-card">
-
-        <i class="fas fa-map-location-dot section-icon"></i>
-
-        <h2>Journey Route Information</h2>
-
-        <p>
-            YatraIQ uses starting point, destination,
-            direction and segment information to
-            estimate journey duration.
-        </p>
-
-        <button class="primary-button"
-        onclick="document.querySelector('[data-page=prediction]').click()">
-
-            Start Route Prediction
-
-        </button>
-
-    </div>
-
-</section>
-
-
-<!-- ANALYTICS PAGE -->
-
-<section id="analytics" class="page">
-
-    <div class="page-heading">
-
-        <h1>Analytics</h1>
-
-        <p>Visualize your journey prediction history.</p>
-
-    </div>
-
-    <div class="content-card">
-
-        <h2>Journey Time Analysis</h2>
-
-        <canvas id="predictionChart"></canvas>
-
-    </div>
-
-</section>
-
-
-<!-- ABOUT PAGE -->
-
-<section id="about" class="page">
-
-    <div class="page-heading">
-
-        <h1>About YatraIQ</h1>
-
-        <p>Smart mobility through machine learning.</p>
-
-    </div>
-
-    <div class="content-card">
-
-        <i class="fas fa-brain section-icon"></i>
-
-        <h2>Our Project</h2>
-
-        <p>
-            YatraIQ is a machine learning based
-            public transport journey time prediction system.
-        </p>
-
-        <p>
-            The system uses historical transport data,
-            feature engineering and a trained ML model
-            to estimate journey duration.
-        </p>
-
-        <h2>Technologies Used</h2>
-
-        <p>
-            Python | Flask | Machine Learning |
-            HTML | CSS | JavaScript
-        </p>
-
-    </div>
-
-</section>
-
-
-</main>
-
-</div>
-
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
